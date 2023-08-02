@@ -78,11 +78,11 @@ jobs:
         if: ${{ always() }}
         run: moodle-plugin-ci --ansi mustache
 
-        - name: init phpunit
+      - name: init phpunit
         if: ${{ always() }}
         run: php admin/tool/phpunit/cli/init.php
         working-directory: moodle
 
-        - name: phpunit
+      - name: phpunit
         if: ${{ always() }}
         run: moodle-plugin-ci --ansi phpunit --coverage-text
